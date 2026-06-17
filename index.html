@@ -1,0 +1,1909 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Никита & Алсина — 04.09.2026</title>
+
+    <meta name="description" content="Приглашение на свадьбу Никиты и Алсины. Будем счастливы разделить этот день вместе с вами.">
+    <meta name="keywords" content="свадьба, приглашение, Никита и Алсина">
+    <meta name="author" content="Никита и Алсина">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Никита & Алсина">
+    <meta property="og:description" content="4 сентября 2026 года. Приглашаем разделить этот день вместе с нами.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/cover.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="Images/bg.jpg">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <style>
+        html{
+            scroll-behavior:smooth;
+        }
+
+        body{
+            font-family:'Inter',sans-serif;
+            background:#faf7f2;
+            color:#4a4a4a;
+        }
+
+        h1,h2,h3,h4{
+            font-family:'Playfair Display',serif;
+        }
+
+        .nav-blur{
+            backdrop-filter:blur(12px);
+            background:rgba(250,247,242,.85);
+        }
+
+        .hero-bg{
+            background:
+                radial-gradient(
+                    circle at top,
+                    #f8f5f0 0%,
+                    #f3ede5 45%,
+                    #ede4d8 100%
+                );
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary{
+            background:#A3B18A;
+            color:white;
+            transition:.3s;
+        }
+
+        .btn-primary:hover{
+            background:#344E41;
+            transform:translateY(-2px);
+        }
+
+        .btn-secondary{
+            border:1px solid #A3B18A;
+            color:#344E41;
+            background:rgba(255,255,255,.5);
+            backdrop-filter:blur(10px);
+            transition:.3s;
+        }
+
+        .btn-secondary:hover{
+            background:#A3B18A;
+            color:white;
+        }
+
+        .section{
+            padding:90px 24px;
+        }
+
+        .container-custom{
+            max-width:1200px;
+            margin:auto;
+        }
+
+        .count-card{
+            min-width: 95px;
+            padding: 20px;
+
+            background: rgba(255,255,255,0.35);
+
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            border: 1px solid rgba(255,255,255,0.6);
+
+            border-radius: 24px;
+
+            box-shadow:
+                0 8px 32px rgba(52,78,65,0.08);
+
+            transition: .3s;
+        }
+
+        .count-card:hover{
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 12px 40px rgba(52,78,65,0.12);
+        }
+
+        .count-number{
+            color: #344E41;
+        }
+
+        .count-label{
+            color: #6B705C;
+            opacity: 1;
+        }
+
+        .mobile-menu{
+            transition:.3s;
+        }
+
+        .placeholder-photo{
+            background:#ece7df;
+            color:#9ca3af;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+
+        .polaroid{
+            background:white;
+            padding:12px 12px 50px;
+            box-shadow:0 10px 30px rgba(0,0,0,.12);
+            transition:.3s;
+        }
+
+        .polaroid:hover{
+            transform:translateY(-8px);
+        }
+
+        .scroll-indicator{
+            animation:float 2s infinite;
+        }
+
+        @keyframes float{
+            0%,100%{
+                transform:translateY(0);
+            }
+
+            50%{
+                transform:translateY(10px);
+            }
+        }
+
+        .hero-bg::before{
+            content: "";
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+
+            background: rgba(163,177,138,.18);
+
+            filter: blur(120px);
+
+            top: -200px;
+            left: -150px;
+
+            z-index: 0;
+        }
+
+        .hero-bg::after{
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+
+            background: rgba(216,180,160,.15);
+
+            filter: blur(120px);
+
+            bottom: -150px;
+            right: -100px;
+
+            z-index: 0;
+        }
+
+        .hero-bg .container-custom{
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header class="fixed top-0 left-0 right-0 z-50 nav-blur shadow-sm">
+
+    <div class="container-custom px-6">
+
+        <div class="flex justify-between items-center h-20">
+
+            <a href="#" class="text-2xl font-semibold text-[#344E41]">
+                Н & А
+            </a>
+
+            <nav class="hidden md:flex gap-8 text-sm font-medium">
+
+                <a href="#hero" class="hover:text-[#A3B18A]">
+                    Главная
+                </a>
+
+                <a href="#welcome" class="hover:text-[#A3B18A]">
+                    О нас
+                </a>
+
+                <a href="#timeline" class="hover:text-[#A3B18A]">
+                    Программа
+                </a>
+
+                <a href="#rsvp" class="hover:text-[#A3B18A]">
+                    RSVP
+                </a>
+
+                <a href="#location" class="hover:text-[#A3B18A]">
+                    Локация
+                </a>
+
+            </nav>
+
+            <button
+                class="md:hidden"
+                onclick="toggleMenu()"
+            >
+                ☰
+            </button>
+
+        </div>
+
+    </div>
+
+    <div
+        id="mobileMenu"
+        class="mobile-menu hidden md:hidden bg-white border-t"
+    >
+
+        <div class="flex flex-col p-6 gap-5">
+
+            <a href="#hero">Главная</a>
+            <a href="#welcome">О нас</a>
+            <a href="#timeline">Программа</a>
+            <a href="#rsvp">RSVP</a>
+            <a href="#location">Локация</a>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- HERO -->
+
+<section
+    id="hero"
+    class="hero-bg min-h-screen flex items-center"
+>
+
+    <div class="container-custom px-6 text-center">
+
+        <div data-aos="fade-up">
+
+            <p class="uppercase tracking-[8px] text-[#A3B18A] text-sm mb-6">
+                Приглашение на свадьбу
+            </p>
+
+            <h1 class="text-[#344E41] text-5xl md:text-7xl mb-6 leading-tight">
+
+                Никита
+
+                <span class="mx-4 text-[#D8B4A0]">
+                    &
+                </span>
+
+                Алсина
+
+            </h1>
+
+            <p class="text-[#344E41] text-2xl md:text-3xl mb-3">
+
+                4 сентября 2026
+
+            </p>
+
+            <p class="text-[#6B705C] text-xl mb-12">
+
+                18:00
+
+            </p>
+
+            <p class="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed mb-14">
+
+                Мы будем счастливы разделить этот день вместе с вами.
+                Ваше присутствие станет самым ценным подарком
+                и частью нашей семейной истории.
+
+            </p>
+
+        </div>
+
+        <!-- Countdown -->
+
+        <div
+            class="flex flex-wrap justify-center gap-4 mb-12"
+            data-aos="fade-up"
+            data-aos-delay="200"
+        >
+
+            <div class="count-card">
+                <div id="weeks" class="count-number">00</div>
+                <div class="count-label">недель</div>
+            </div>
+
+            <div class="count-card">
+                <div id="days" class="count-number">00</div>
+                <div class="count-label">дней</div>
+            </div>
+
+            <div class="count-card">
+                <div id="hours" class="count-number">00</div>
+                <div class="count-label">часов</div>
+            </div>
+
+            <div class="count-card">
+                <div id="minutes" class="count-number">00</div>
+                <div class="count-label">минут</div>
+            </div>
+
+            <div class="count-card">
+                <div id="seconds" class="count-number">00</div>
+                <div class="count-label">секунд</div>
+            </div>
+
+        </div>
+
+        <!-- Buttons -->
+
+        <div
+            class="flex flex-col md:flex-row justify-center gap-4"
+            data-aos="fade-up"
+            data-aos-delay="400"
+        >
+
+            <a
+                href="#rsvp"
+                class="btn-primary px-8 py-4 rounded-full font-medium"
+            >
+                Подтвердить присутствие
+            </a>
+
+            <button
+                onclick="addToCalendar()"
+                class="btn-secondary px-8 py-4 rounded-full"
+            >
+                Добавить в календарь
+            </button>
+
+        </div>
+
+        <!-- Scroll -->
+
+        <div class="mt-20 scroll-indicator">
+
+            <a href="#welcome">
+
+                <svg
+                    class="w-10 h-10 text-[#A3B18A] mx-auto"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 14l-7 7-7-7"
+                    />
+                </svg>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- WELCOME -->
+
+<section
+    id="welcome"
+    class="section"
+>
+
+    <div class="container-custom">
+
+        <div
+            class="text-center max-w-3xl mx-auto"
+            data-aos="fade-up"
+        >
+
+            <h2 class="text-5xl mb-8 text-[#344E41]">
+
+                Дорогой гость!
+
+            </h2>
+
+            <p class="text-lg leading-9 text-gray-600">
+
+                Мы рады сообщить Вам,
+                что состоится самое главное торжество
+                в нашей жизни —
+                день нашей свадьбы.
+
+                <br><br>
+
+                Приглашаем Вас разделить с нами
+                радость этого незабываемого дня.
+
+            </p>
+
+        </div>
+
+        <!-- Photos -->
+
+        <div
+            class="grid md:grid-cols-2 gap-8 mt-16"
+            data-aos="fade-up"
+        >
+
+            <div class="polaroid rotate-[-3deg]">
+
+                <img
+                    src="Images/Nikita.jpg"
+                    alt="Никита"
+                    class="h-80 w-full object-cover rounded"
+                    loading="lazy"
+                >
+
+                <p class="text-center mt-4 text-xl text-[#344E41]">
+                    Никита
+                </p>
+
+            </div>
+
+            <!-- <div class="polaroid">
+
+                <div class="placeholder-photo h-80 rounded">
+
+                    Фото пары
+
+                </div>
+
+            </div> -->
+
+            <div class="polaroid rotate-[3deg]">
+
+                  <img
+                    src="Images/Alsina.jpg"
+                    alt="Алсина"
+                    class="h-80 w-full object-cover rounded"
+                    loading="lazy"
+                >
+                
+                <p class="text-center mt-4 text-x1 text-[#344E41]">
+                    Алсина
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- МЕСТО ПРОВЕДЕНИЯ -->
+
+<section class="section bg-white">
+
+    <div class="container-custom">
+
+        <div
+            class="text-center mb-14"
+            data-aos="fade-up"
+        >
+
+            <p class="uppercase tracking-[6px] text-[#A3B18A] mb-4">
+                Место проведения
+            </p>
+
+            <h2 class="text-5xl text-[#344E41] mb-6">
+
+                Ресторан «Ривьера»
+
+            </h2>
+
+            <p class="text-lg text-gray-600">
+
+                наб. Афанасия Никитина, д. 13, Тверь
+
+            </p>
+
+            <p class="text-gray-500 mt-3">
+
+                Начало торжества в 18:00
+
+            </p>
+
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+                <img
+                    src="Images/Riviera.png"
+                    alt="Алсина"
+                    class="h-40 w-120 object-cover rounded"
+                    loading="lazy"
+                >
+
+            <div
+                data-aos="fade-left"
+            >
+
+                <h3 class="text-3xl text-[#344E41] mb-6">
+
+                    Здесь начнётся наша семейная история
+
+                </h3>
+
+                <p class="text-gray-600 leading-8 mb-10">
+
+                    Мы выбрали уютный ресторан «Ривьера»,
+                    чтобы провести этот вечер в кругу самых близких людей.
+                    Нас ждут искренние улыбки, тёплые объятия,
+                    вкусные блюда и множество счастливых моментов.
+
+                </p>
+
+                <div class="flex flex-wrap gap-4">
+
+                    <a
+                        href="https://maps.google.com/?q=Ривьера,Тверь"
+                        target="_blank"
+                        class="btn-primary px-6 py-4 rounded-full"
+                    >
+                        Google Maps
+                    </a>
+
+                    <a
+                        href="https://yandex.ru/maps/?text=наб.+Афанасия+Никитина,+13,+Тверь"
+                        target="_blank"
+                        class="border border-[#A3B18A] text-[#344E41] px-6 py-4 rounded-full hover:bg-[#A3B18A] hover:text-white transition"
+                    >
+                        Яндекс Карты
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ГАЛЕРЕЯ
+
+<section class="section">
+
+    <div class="container-custom">
+
+        <div
+            class="text-center mb-14"
+            data-aos="fade-up"
+        >
+
+            <h2 class="text-5xl text-[#344E41] mb-4">
+
+                Немного атмосферы
+
+            </h2>
+
+            <p class="text-gray-600">
+
+                Здесь позже появятся фотографии ресторана и подготовки к празднику
+
+            </p>
+
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <div
+                class="placeholder-photo h-72 rounded-3xl"
+                data-aos="zoom-in"
+            >
+                Фото
+            </div>
+
+            <div
+                class="placeholder-photo h-72 rounded-3xl"
+                data-aos="zoom-in"
+                data-aos-delay="150"
+            >
+                Фото
+            </div>
+
+            <div
+                class="placeholder-photo h-72 rounded-3xl"
+                data-aos="zoom-in"
+                data-aos-delay="300"
+            >
+                Фото
+            </div>
+
+        </div>
+
+    </div>
+
+</section> -->
+
+<!-- ПРАЗДНИЧНОЕ МЕНЮ -->
+
+<section class="section">
+
+    <div class="container-custom">
+
+        <div
+            class="text-center mb-14"
+            data-aos="fade-up"
+        >
+
+            <h2 class="text-5xl text-[#344E41] mb-5">
+
+                Праздничное меню
+
+            </h2>
+
+            <p class="text-gray-600">
+
+                Мы постарались сделать этот вечер вкусным для каждого гостя
+
+            </p>
+
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
+
+            <div
+                class="bg-[#faf7f2] rounded-3xl p-8"
+                data-aos="fade-up"
+            >
+
+                <div class="text-8xl mb-5">
+                    🧀
+                </div>
+
+                <h3 class="text-4xl mb-4 text-[#344E41]">
+                    Закуски
+                </h3>
+            </div>
+
+            <div
+                class="bg-[#faf7f2] rounded-3xl p-8"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
+
+                <div class="text-8xl mb-5">
+                    🍽️
+                </div>
+
+                <h3 class="text-4xl mb-4 text-[#344E41]">
+                    Горячее
+                </h3>
+            </div>
+
+            <div
+                class="bg-[#faf7f2] rounded-3xl p-8"
+                data-aos="fade-up"
+                data-aos-delay="200"
+            >
+
+                <div class="text-8xl mb-5">
+                    🍰
+                </div>
+
+                <h3 class="text-4xl mb-4 text-[#344E41]">
+                    Десерты
+                </h3>
+            </div>
+
+            <div
+                class="bg-[#faf7f2] rounded-3xl p-8"
+                data-aos="fade-up"
+                data-aos-delay="300"
+            >
+
+                <div class="text-8xl mb-5">
+                    🍷
+                </div>
+
+                <h3 class="text-4xl mb-4 text-[#344E41]">
+                    Напитки
+                </h3>
+            </div>
+
+        </div>
+
+        <div
+            class="text-center mt-12"
+            data-aos="fade-up"
+        >
+
+            <p class="text-gray-500 italic">
+
+                Если у Вас есть аллергии или ограничения в питании,
+                пожалуйста, укажите их в анкете ниже.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ПОДАРКИ -->
+
+<section class="section bg-white">
+
+    <div class="container-custom max-w-4xl text-center">
+
+        <div data-aos="fade-up">
+
+            <h2 class="text-5xl text-[#344E41] mb-8">
+
+                Пожелания по подаркам
+
+            </h2>
+
+            <p class="text-xl text-gray-600 leading-10">
+
+                Ваше присутствие —
+                лучший подарок для нас.
+
+                <br><br>
+
+                Если Вы захотите поздравить нас материально,
+                мы будем рады вкладу
+                в исполнение нашей общей мечты.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ВАЖНАЯ ИНФОРМАЦИЯ -->
+
+<section class="section">
+
+    <div class="container-custom">
+
+        <div
+            class="text-center mb-14"
+            data-aos="fade-up"
+        >
+
+            <h2 class="text-5xl text-[#344E41]">
+
+                Важная информация
+
+            </h2>
+
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- 
+            <div
+                class="p-8 rounded-3xl bg-[#faf7f2]"
+                data-aos="fade-up"
+            >
+
+                <div class="text-4xl mb-5">
+                    👗
+                </div>
+
+                <h3 class="text-2xl mb-4 text-[#344E41]">
+                    Дресс-код
+                </h3>
+
+                <p class="text-gray-600">
+                    Пастельные и природные оттенки будут прекрасно сочетаться с атмосферой праздника.
+                </p>
+
+            </div> -->
+
+            <div
+                class="p-8 rounded-3xl bg-white"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
+
+                <div class="text-4xl mb-5">
+                    🚗
+                </div>
+
+                <h3 class="text-2xl mb-4 text-[#344E41]">
+                    Парковка
+                </h3>
+
+                <p class="text-gray-600">
+                    Возле ресторана имеется парковка для гостей.
+                </p>
+
+            </div>
+
+            <div
+                class="p-8 rounded-3xl bg-white"
+                data-aos="fade-up"
+                data-aos-delay="200"
+            >
+
+                <div class="text-4xl mb-5">
+                    🚌
+                </div>
+
+                <h3 class="text-2xl mb-4 text-[#344E41]">
+                    Трансфер
+                </h3>
+
+                <p class="text-gray-600">
+                    Если Вам понадобится трансфер,
+                    укажите это в анкете.
+                </p>
+
+            </div>
+
+            <div
+                class="p-8 rounded-3xl bg-white"
+                data-aos="fade-up"
+                data-aos-delay="300"
+            >
+
+                <div class="text-4xl mb-5">
+                    🌷
+                </div>
+
+                <h3 class="text-2xl mb-4 text-[#344E41]">
+                    Цветы
+                </h3>
+
+                <p class="text-gray-600">
+                    Вместо букетов будем рады любой другой альтернативе.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ПАЛИТРА -->
+
+<section class="section bg-white">
+
+    <div class="container-custom text-center">
+
+        <div data-aos="fade-up">
+
+            <h2 class="text-5xl text-[#344E41] mb-8">
+
+                Палитра нашего дня
+
+            </h2>
+
+            <p class="text-gray-600 mb-14">
+
+                Мы будем рады, если Ваш образ будет соответствовать этим оттенкам
+
+            </p>
+
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-12">
+
+            <div data-aos="zoom-in">
+                <div class="w-24 h-24 rounded-full shadow-lg mx-auto mb-4" style="background:#E9D4C3;"></div>
+                <!-- <p> Пудрово-<br>
+                    бежевый</p> -->
+                <!-- <p class="text-gray-500 text-sm">#E9D4C3</p> -->
+            </div>
+
+            <div data-aos="zoom-in" data-aos-delay="100">
+                <div class="w-24 h-24 rounded-full shadow-lg mx-auto mb-4" style="background:#9D6F52;"></div>
+                <!-- <p>Терракотовый</p> -->
+                <!-- <p class="text-gray-500 text-sm">#9D6F52</p> -->
+            </div>
+
+            <div data-aos="zoom-in" data-aos-delay="200">
+                <div class="w-24 h-24 rounded-full shadow-lg mx-auto mb-4" style="background:#6A3E2B;"></div>
+                <!-- <p>Каштановый</p> -->
+                <!-- <p class="text-gray-500 text-sm">#6A3E2B</p> -->
+            </div>
+
+            <div data-aos="zoom-in" data-aos-delay="300">
+                <div class="w-24 h-24 rounded-full shadow-lg mx-auto mb-4" style="background:#2D1910;"></div>
+                <!-- <p>Эспрессо</p> -->
+                <!-- <p class="text-gray-500 text-sm">#2D1910</p> -->
+            </div>
+
+            <div data-aos="zoom-in" data-aos-delay="300">
+                <div class="w-24 h-24 rounded-full shadow-lg mx-auto mb-4" style="background:#191919;"></div>
+                <!-- <p>Угольный</p> -->
+                <!-- <p class="text-gray-500 text-sm">#191919</p> -->
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- TELEGRAM -->
+
+<section class="section">
+
+    <div class="container-custom text-center">
+
+        <div data-aos="fade-up">
+
+            <p class="uppercase tracking-[6px] text-[#A3B18A] mb-4">
+                Telegram
+            </p>
+
+            <h2 class="text-5xl text-[#344E41] mb-6">
+                Делитесь моментами
+            </h2>
+
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-8 mb-10">
+
+                Нам будет очень приятно увидеть этот день
+                вашими глазами.
+
+                Публикуйте фотографии и видео
+                в нашей Telegram-группе.
+
+            </p>
+
+            <a
+                href="https://t.me/+QF0RbUeIY31mNmI6"
+                target="_blank"
+                class="btn-primary inline-block px-8 py-4 rounded-full font-medium"
+            >
+                Перейти в Telegram
+            </a>
+
+        </div>
+
+        <div
+            class="mt-14 flex flex-col items-center"
+            data-aos="zoom-in"
+        >
+
+        <div class="bg-white p-5 rounded-3xl shadow-xl inline-block">
+            <img
+                src="Images/TG-QRCode.png"
+                alt="QR-код Telegram"
+                class="w-[220px] h-[220px] object-contain rounded-xl"
+                loading="lazy"
+            >
+        </div>
+
+        <p class="text-gray-500 mt-5">
+            Отсканируйте QR-код, чтобы присоединиться к нашей группе в Telegram и делиться фотографиями этого дня ♡
+        </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- TIMELINE -->
+
+<section
+    id="timeline"
+    class="section bg-white"
+>
+
+    <div class="container-custom max-w-4xl">
+
+        <div
+            class="text-center mb-16"
+            data-aos="fade-up"
+        >
+
+            <h2 class="text-5xl text-[#344E41] mb-6">
+
+                Тайминг свадебного дня
+
+            </h2>
+
+            <p class="text-gray-600">
+
+                Пусть этот день пройдёт легко и красиво
+
+            </p>
+
+        </div>
+
+        <div class="relative">
+
+            <div
+                class="absolute left-5 top-0 bottom-0 w-1 bg-[#A3B18A]"
+            ></div>
+
+
+            <div
+                class="relative pl-20"
+                data-aos="fade-right"
+                data-aos-delay="400"
+            >
+
+                <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-[#A3B18A] border-4 border-white shadow-lg"></div>
+
+                <h3 class="text-3xl text-[#344E41] mb-2">
+                    11:30
+                </h3>
+
+                <p class="text-xl mb-2">
+                    Церемония в загсе
+                </p>
+
+                <p class="text-gray-600">
+                    Роспись состоится в Московском областном дворце бракосочетания №2, по адресу: ул. Международная, д. 12, ТЦ "Вегас Мякинино", этаж 6<br><br>
+                    Мы ценим Ваше время и не настаиваем на присутствии на официальной церемонии, однако если у вас есть желание разделить с нами этот момент, будем рады видеть Вас.<br><br>
+
+                </p>
+
+            </div>
+
+            <!-- 18:00 -->
+
+            <div
+                class="relative pl-20 pb-16"
+                data-aos="fade-right"
+            >
+
+                <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-[#A3B18A] border-4 border-white shadow-lg"></div>
+
+                <h3 class="text-3xl text-[#344E41] mb-2">
+                    14:00
+                </h3>
+
+                <p class="text-xl mb-2">
+                    Отправление в Тверь
+                </p>
+
+                <p class="text-gray-600">
+                    Вас будет ждать трансфер до Твери, который привезет вас в отель.
+                </p>
+
+            </div>
+
+            <!-- 18:30 -->
+
+            <div
+                class="relative pl-20 pb-16"
+                data-aos="fade-right"
+                data-aos-delay="100"
+            >
+
+                <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-[#A3B18A] border-4 border-white shadow-lg"></div>
+
+                <h3 class="text-3xl text-[#344E41] mb-2">
+                    16:30
+                </h3>
+
+                <p class="text-xl mb-2">
+                    Прибытие в отель
+                </p>
+
+                <p class="text-gray-600">
+                    У вас будет примерно час свободного вермени, чтобы отдохнуть и подготовиться к банкету.
+                </p>
+
+            </div>
+
+            <!-- 19:00 -->
+
+            <div
+                class="relative pl-20 pb-16"
+                data-aos="fade-right"
+                data-aos-delay="200"
+            >
+
+                <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-[#A3B18A] border-4 border-white shadow-lg"></div>
+
+                <h3 class="text-3xl text-[#344E41] mb-2">
+                    18:00
+                </h3>
+
+                <p class="text-xl mb-2">
+                    Праздничный банкет
+                </p>
+
+                <p class="text-gray-600">
+                    Ужин, поздравления и развлечения.
+                </p>
+
+            </div>
+
+            <!-- 21:30 -->
+
+            <div
+                class="relative pl-20 pb-16"
+                data-aos="fade-right"
+                data-aos-delay="300"
+            >
+
+                <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-[#A3B18A] border-4 border-white shadow-lg"></div>
+
+                <h3 class="text-3xl text-[#344E41] mb-2">
+                    00:00
+                </h3>
+
+                <p class="text-xl mb-2">
+                    Окончание праздничного дня
+                </p>
+
+                <p class="text-gray-600">
+                    Даже такой день может когда-то подойти к концу.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- RSVP -->
+
+<section
+    id="rsvp"
+    class="section"
+>
+
+    <div class="container-custom max-w-3xl">
+
+        <div
+            class="text-center mb-14"
+            data-aos="fade-up"
+        >
+
+            <h2 class="text-5xl text-[#344E41] mb-6">
+
+                Подтверждение участия
+
+            </h2>
+
+            <p class="text-gray-600">
+
+                Пожалуйста, ответьте до 15 июля 2026 года
+
+            </p>
+
+        </div>
+
+        <form
+            id="rsvpForm"
+            class="space-y-6"
+            data-aos="fade-up"
+        >
+
+            <input
+                type="text"
+                name="fullName"
+                placeholder="Имя и фамилия"
+                required
+                class="w-full p-4 rounded-2xl border"
+            >
+
+            <select
+                name="attendance"
+                id="attendance"
+                required
+                class="w-full p-4 rounded-2xl border"
+            >
+                <option value="">
+                    Сможете ли присутствовать?
+                </option>
+
+                <option value="Да">
+                    Да, с радостью
+                </option>
+
+                <option value="Нет">
+                    К сожалению, нет
+                </option>
+
+            </select>
+
+            <div id="attendanceFields">
+
+                <input
+                    type="number"
+                    name="guests"
+                    min="1"
+                    placeholder="Количество гостей"
+                    class="w-full p-4 rounded-2xl border mb-6"
+                >
+
+                <select
+                    name="transfer"
+                    class="w-full p-4 rounded-2xl border mb-6"
+                >
+
+                    <option value="">
+                        Нужен ли трансфер?
+                    </option>
+
+                    <option value="Да">
+                        Да
+                    </option>
+
+                    <option value="Нет">
+                        Нет
+                    </option>
+
+                </select>
+
+                <div
+                    id="transferDetails"
+                    class="hidden opacity-0 transition-all duration-300"
+                >
+
+                    <p class="text-sm text-gray-500 mb-6">
+                        Ждем вас в 14:00 по адресу: г.Москва, ул. Международная, д. 12, метро Мякинино.<br>
+                        Парковка рядом с ТЦ "Вегас Мякинино"
+                    </p>
+                    <textarea
+                        name="transferComment"
+                        placeholder="Комментарий к трансферу"
+                        class="w-full p-4 rounded-2xl border mb-6"
+                    ></textarea>
+                </div>
+
+                <textarea
+                    name="food"
+                    rows="3"
+                    placeholder="Аллергии и ограничения питания"
+                    class="w-full p-4 rounded-2xl border mb-6"
+                ></textarea>
+
+                <select
+                    name="alcohol"
+                    class="w-full p-4 rounded-2xl border mb-6"
+                >
+
+                    <option value="">
+                        Предпочтения по алкоголю
+                    </option>
+
+                    <option>
+                        Красное вино
+                    </option>
+
+                    <option>
+                        Белое вино
+                    </option>
+
+                    <option>
+                        Шампанское
+                    </option>
+
+                    <option>
+                        Виски / коньяк
+                    </option>
+
+                    <option>
+                        Водка
+                    </option>
+
+                    <option>
+                        Не буду пить алкоголь
+                    </option>
+
+                </select>
+
+                <select
+                    name="alcohol_mix"
+                    class="w-full p-4 rounded-2xl border mb-6"
+                >
+
+                    <option value="">
+                        Чем разбавляете алкоголь?
+                    </option>
+
+                    <option>
+                        Coca-cola
+                    </option>
+
+                    <option>
+                        Sprite
+                    </option>
+
+                    <option>
+                        Сок
+                    </option>
+
+                    <option>
+                        Пью в чистом виде
+                    </option>
+                </select>
+
+                <p class="text-gray-600">
+
+                    Если Вы не нашли нужного вопроса, пожалуйста, укажите свои пожелания ниже, в разделе "Гостевая книга". 
+                    
+                </p>
+
+            </div>
+
+            <button
+                type="submit"
+                class="btn-primary w-full py-4 rounded-2xl font-medium"
+            >
+
+                Отправить ответ
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- ГОСТЕВАЯ КНИГА -->
+
+<section class="section">
+
+    <div class="container-custom max-w-3xl">
+
+        <div
+            class="text-center mb-14"
+            data-aos="fade-up"
+        >
+
+            <h2 class="text-5xl text-[#344E41] mb-6">
+
+                Гостевая книга
+
+            </h2>
+
+            <p class="text-gray-600">
+
+                Оставьте несколько тёплых слов для нашей будущей семьи
+                
+            </p>
+
+        </div>
+
+        <form
+            id="guestbookForm"
+            class="space-y-6"
+            data-aos="fade-up"
+        >
+
+            <input
+                type="text"
+                name="guestName"
+                required
+                placeholder="Ваше имя"
+                class="w-full p-4 rounded-2xl border"
+            >
+
+            <textarea
+                name="guestWish"
+                rows="6"
+                required
+                placeholder="Ваше пожелание"
+                class="w-full p-4 rounded-2xl border"
+            ></textarea>
+
+            <button
+                type="submit"
+                class="btn-primary px-8 py-4 rounded-2xl"
+            >
+
+                Оставить пожелание
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+<!-- ЛОКАЦИЯ -->
+
+<section id="location" class="section bg-white">
+
+    <div class="container-custom">
+
+        <div class="text-center mb-14" data-aos="fade-up">
+
+            <h2 class="text-5xl text-[#344E41] mb-6">
+                Как добраться
+            </h2>
+
+            <p class="text-gray-600">
+                Ресторан «Ривьера»
+            </p>
+
+            <p class="text-gray-500">
+                наб. Афанасия Никитина, д. 13, Тверь
+            </p>
+
+        </div>
+
+        <div
+            class="overflow-hidden rounded-3xl shadow-xl"
+            data-aos="zoom-in"
+        >
+
+            <iframe
+                src="https://yandex.ru/map-widget/v1/?text=наб.%20Афанасия%20Никитина%2013%20Тверь"
+                width="100%"
+                height="500"
+                frameborder="0"
+                allowfullscreen
+            ></iframe>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="py-16 text-center">
+
+    <h2 class="text-4xl text-[#344E41] mb-4">
+        Никита & Алсина
+    </h2>
+
+    <p class="text-gray-500">
+        04 сентября 2026 • Тверь
+    </p>
+
+    <p class="text-gray-400 mt-6 text-sm">
+        Спасибо, что разделите этот день вместе с нами ♡
+    </p>
+
+</footer>
+
+<!-- БИБЛИОТЕКИ -->
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+/* ==========================
+   НАСТРОЙКИ
+========================== */
+
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxInuB4Z6Xx7kNxS-IHXgaY1x7f7442CzNhO746ONSXhQzzDwxx6Mn-RtBllOTPk6VwaA/exec";
+const EMAILJS_PUBLIC_KEY = "VyUkvqSaTyVGgyxIk";
+const EMAILJS_SERVICE_ID = "service_4uxatzd";
+const EMAILJS_TEMPLATE_ID = "template_tqky6ei";
+
+/* ==========================
+   AOS
+========================== */
+
+AOS.init({
+    duration: 900,
+    once: true
+});
+
+/* ==========================
+   MOBILE MENU
+========================== */
+
+function toggleMenu() {
+    document
+        .getElementById("mobileMenu")
+        .classList
+        .toggle("hidden");
+}
+
+/* ==========================
+   QR TELEGRAM
+========================== */
+
+QRCode.toCanvas(
+    document.getElementById("telegramQR"),
+    "https://t.me/+QF0RbUeIY31mNmI6",
+    {
+        width: 220
+    }
+);
+
+/* ==========================
+   COUNTDOWN
+========================== */
+
+const weddingDate = new Date(
+    "2026-09-04T18:00:00"
+).getTime();
+
+setInterval(() => {
+
+    const now = new Date().getTime();
+
+    const distance = weddingDate - now;
+
+    if(distance <= 0) return;
+
+    const weeks =
+        Math.floor(distance / (1000*60*60*24*7));
+
+    const days =
+        Math.floor(
+            (
+                distance %
+                (1000*60*60*24*7)
+            ) /
+            (1000*60*60*24)
+        );
+
+    const hours =
+        Math.floor(
+            (
+                distance %
+                (1000*60*60*24)
+            ) /
+            (1000*60*60)
+        );
+
+    const minutes =
+        Math.floor(
+            (
+                distance %
+                (1000*60*60)
+            ) /
+            (1000*60)
+        );
+
+    const seconds =
+        Math.floor(
+            (
+                distance %
+                (1000*60)
+            ) / 1000
+        );
+
+    weeksEl.innerText =
+        String(weeks).padStart(2,"0");
+
+    daysEl.innerText =
+        String(days).padStart(2,"0");
+
+    hoursEl.innerText =
+        String(hours).padStart(2,"0");
+
+    minutesEl.innerText =
+        String(minutes).padStart(2,"0");
+
+    secondsEl.innerText =
+        String(seconds).padStart(2,"0");
+
+},1000);
+
+const weeksEl=document.getElementById("weeks");
+const daysEl=document.getElementById("days");
+const hoursEl=document.getElementById("hours");
+const minutesEl=document.getElementById("minutes");
+const secondsEl=document.getElementById("seconds");
+
+/* ==========================
+   CALENDAR
+========================== */
+
+function addToCalendar(){
+
+    const start="20260904T180000";
+    const end="20260904T230000";
+
+    const title=
+        "Свадьба Никиты и Алсины";
+
+    const location=
+        "Ресторан Ривьера, Тверь";
+
+    const description=
+        "Будем счастливы разделить этот день вместе с вами.";
+
+    const googleUrl=
+        `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${start}/${end}&details=${encodeURIComponent(description)}&location=${encodeURIComponent(location)}`;
+
+    window.open(
+        googleUrl,
+        "_blank"
+    );
+
+    const ics=
+`BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+DTSTART:${start}
+DTEND:${end}
+SUMMARY:${title}
+DESCRIPTION:${description}
+LOCATION:${location}
+END:VEVENT
+END:VCALENDAR`;
+
+    const blob=
+        new Blob(
+            [ics],
+            {type:"text/calendar"}
+        );
+
+    const link=
+        document.createElement("a");
+
+    link.href=
+        URL.createObjectURL(blob);
+
+    link.download=
+        "wedding.ics";
+
+    link.click();
+
+}
+
+/* ==========================
+   EMAILJS
+========================== */
+
+emailjs.init({
+    publicKey: EMAILJS_PUBLIC_KEY
+});
+
+/* ==========================
+   GOOGLE SHEETS
+========================== */
+
+async function sendToGoogleSheets(data) {
+  try {
+    const formData = new FormData();
+    for (const key in data) {
+      formData.append(key, data[key]);
+    }
+
+    await fetch(GOOGLE_SCRIPT_URL, {
+      method: "POST",
+      body: formData
+    });
+  } catch(error) {
+    console.error(error);
+  }
+}
+
+/* ==========================
+   RSVP
+========================== */
+
+document
+.getElementById("rsvpForm")
+.addEventListener(
+    "submit",
+    async function(e){
+
+        e.preventDefault();
+
+        const formData=
+            Object.fromEntries(
+                new FormData(this)
+            );
+
+        try{
+
+            await sendToGoogleSheets({
+                type:"RSVP",
+                ...formData
+            });
+
+
+
+            await emailjs.send(
+                EMAILJS_SERVICE_ID,
+                EMAILJS_TEMPLATE_ID,
+                {
+                    fullName: formData.fullName,
+                    attendance: formData.attendance,
+                    guests: formData.guests,
+                    transfer: formData.transfer,
+                    transferComment: formData.transferComment,
+                    food: formData.food,
+                    alcohol: formData.alcohol,
+                    alcohol_mix: formData.alcohol_mix
+                }
+            );
+
+
+
+            alert(
+                "Спасибо! Ваш ответ получен."
+            );
+
+            this.reset();
+
+        }catch(error){
+
+            alert(
+                "Ошибка отправки."
+            );
+
+        }
+
+    }
+);
+
+/* ==========================
+   GUESTBOOK
+========================== */
+
+document
+.getElementById("guestbookForm")
+.addEventListener(
+    "submit",
+    async function(e){
+
+        e.preventDefault();
+
+        const data=
+            Object.fromEntries(
+                new FormData(this)
+            );
+
+        try{
+
+            await sendToGoogleSheets({
+                type:"Guestbook",
+                ...data
+            });
+
+            alert(
+                "Спасибо за пожелание!"
+            );
+
+            this.reset();
+
+        }catch(error){
+
+            alert(
+                "Не удалось отправить сообщение."
+            );
+
+        }
+
+    }
+);
+
+/* ==========================
+   RSVP LOGIC
+========================== */
+
+document
+.getElementById("attendance")
+.addEventListener(
+    "change",
+    function(){
+
+        const fields=
+            document.getElementById(
+                "attendanceFields"
+            );
+
+        if(
+            this.value==="Нет"
+        ){
+
+            fields.style.display=
+                "none";
+
+        }else{
+
+            fields.style.display=
+                "block";
+
+        }
+
+    }
+);
+
+/* ==========================
+   ПЕРСОНАЛЬНОЕ ПРИГЛАШЕНИЕ
+========================== */
+
+const params=
+    new URLSearchParams(
+        location.search
+    );
+
+const guest=
+    params.get("guest");
+
+if(guest){
+
+    const greeting=
+        document.querySelector(
+            "#welcome h2"
+        );
+
+    if(greeting){
+
+        greeting.innerHTML=
+            `Дорогой(ая) ${guest}!`;
+
+    }
+
+}
+/* ==========================
+   TRANSFER
+========================== */
+
+const transferSelect = document.querySelector(
+    'select[name="transfer"]'
+);
+
+const transferDetails = document.getElementById(
+    'transferDetails'
+);
+
+if (transferSelect && transferDetails) {
+
+    transferSelect.addEventListener('change', function () {
+
+        if (this.value === 'Да') {
+
+            transferDetails.classList.remove('hidden');
+
+            setTimeout(() => {
+                transferDetails.classList.remove('opacity-0');
+            }, 10);
+
+        } else {
+
+            transferDetails.classList.add('opacity-0');
+
+            setTimeout(() => {
+                transferDetails.classList.add('hidden');
+            }, 300);
+
+            const input = transferDetails.querySelector('input');
+
+            if (input) {
+                input.value = '';
+            }
+        }
+
+    });
+
+}
+</script>
+
+</body>
+</html>
