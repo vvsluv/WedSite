@@ -204,12 +204,26 @@
             position: relative;
             z-index: 2;
         }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .spinner {
+            width: 18px;
+            height: 18px;
+            border: 2px solid rgba(255,255,255,0.4);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+            display: inline-block;
+            flex-shrink: 0;
+        }
     </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- NAVIGATION
 
 <header class="fixed top-0 left-0 right-0 z-50 nav-blur shadow-sm">
 
@@ -273,7 +287,7 @@
 
     </div>
 
-</header>
+</header> -->
 
 <!-- HERO -->
 
@@ -450,7 +464,7 @@
         <!-- Photos -->
 
         <div
-            class="grid md:grid-cols-2 gap-8 mt-16"
+            class="grid md:grid-cols-2 gap-8 mt-16 mb-16"
             data-aos="fade-up"
         >
 
@@ -496,6 +510,10 @@
         </div>
 
     </div>
+
+    <p class="uppercase tracking-[6px] text-[#A3B18A] mb-4 text-center">
+        Мы выросли и теперь нам можно
+    </p>
 
 </section>
 
@@ -929,16 +947,16 @@
                 <!-- <p class="text-gray-500 text-sm">#9D6F52</p> -->
             </div>
 
-            <div data-aos="zoom-in" data-aos-delay="200">
-                <div class="w-24 h-24 rounded-full shadow-lg mx-auto mb-4" style="background:#6A3E2B;"></div>
+            <!-- <div data-aos="zoom-in" data-aos-delay="200"> -->
+                <!-- <div class="w-24 h-24 rounded-full shadow-lg mx-auto mb-4" style="background:#6A3E2B;"></div> -->
                 <!-- <p>Каштановый</p> -->
                 <!-- <p class="text-gray-500 text-sm">#6A3E2B</p> -->
-            </div>
+            <!-- </div> -->
 
             <div data-aos="zoom-in" data-aos-delay="300">
-                <div class="w-24 h-24 rounded-full shadow-lg mx-auto mb-4" style="background:#2D1910;"></div>
+                <div class="w-24 h-24 rounded-full shadow-lg mx-auto mb-4" style="background:#472A1F;"></div>
                 <!-- <p>Эспрессо</p> -->
-                <!-- <p class="text-gray-500 text-sm">#2D1910</p> -->
+                <!-- <p class="text-gray-500 text-sm">#472A1F</p> -->
             </div>
 
             <div data-aos="zoom-in" data-aos-delay="300">
@@ -1185,10 +1203,9 @@
             data-aos="fade-up"
         >
 
-            <h2 class="text-5xl text-[#344E41] mb-6">
-
-                Подтверждение участия
-
+        <h2 class="text-5xl text-[#344E41] mb-6 text-center">
+            Подтверждение участия
+        </h2>
             </h2>
 
             <p class="text-gray-600">
@@ -1205,162 +1222,32 @@
             data-aos="fade-up"
         >
 
-            <input
-                type="text"
-                name="fullName"
-                placeholder="Имя и фамилия"
-                required
-                class="w-full p-4 rounded-2xl border"
-            >
-
-            <select
-                name="attendance"
-                id="attendance"
-                required
-                class="w-full p-4 rounded-2xl border"
-            >
-                <option value="">
-                    Сможете ли присутствовать?
-                </option>
-
-                <option value="Да">
-                    Да, с радостью
-                </option>
-
-                <option value="Нет">
-                    К сожалению, нет
-                </option>
-
-            </select>
-
             <div id="attendanceFields">
 
-                <input
-                    type="number"
-                    name="guests"
-                    min="1"
-                    placeholder="Количество гостей"
-                    class="w-full p-4 rounded-2xl border mb-6"
+                <!-- Контейнер с анкетами гостей -->
+                <div id="guestCards"></div>
+
+                <!-- Кнопка добавить гостя -->
+                <button
+                    type="button"
+                    onclick="addGuestCard()"
+                    class="w-full py-3 mb-6 rounded-2xl border-2 border-dashed border-[#A3B18A] text-[#344E41] font-medium hover:bg-[#f0f5ec] transition flex items-center justify-center gap-2"
                 >
+                    <span class="text-2xl leading-none">+</span>&nbsp;Добавить гостя
+                </button>
 
-                <select
-                    name="transfer"
-                    class="w-full p-4 rounded-2xl border mb-6"
-                >
-
-                    <option value="">
-                        Нужен ли трансфер?
-                    </option>
-
-                    <option value="Да">
-                        Да
-                    </option>
-
-                    <option value="Нет">
-                        Нет
-                    </option>
-
-                </select>
-
-                <div
-                    id="transferDetails"
-                    class="hidden opacity-0 transition-all duration-300"
-                >
-
-                    <p class="text-sm text-gray-500 mb-6">
-                        Ждем вас в 14:00 по адресу: г.Москва, ул. Международная, д. 12, метро Мякинино.<br>
-                        Парковка рядом с ТЦ "Вегас Мякинино"
-                    </p>
-                    <textarea
-                        name="transferComment"
-                        placeholder="Комментарий к трансферу"
-                        class="w-full p-4 rounded-2xl border mb-6"
-                    ></textarea>
-                </div>
-
-                <textarea
-                    name="food"
-                    rows="3"
-                    placeholder="Аллергии и ограничения питания"
-                    class="w-full p-4 rounded-2xl border mb-6"
-                ></textarea>
-
-                <select
-                    name="alcohol"
-                    class="w-full p-4 rounded-2xl border mb-6"
-                >
-
-                    <option value="">
-                        Предпочтения по алкоголю
-                    </option>
-
-                    <option>
-                        Красное вино
-                    </option>
-
-                    <option>
-                        Белое вино
-                    </option>
-
-                    <option>
-                        Шампанское
-                    </option>
-
-                    <option>
-                        Виски / коньяк
-                    </option>
-
-                    <option>
-                        Водка
-                    </option>
-
-                    <option>
-                        Не буду пить алкоголь
-                    </option>
-
-                </select>
-
-                <select
-                    name="alcohol_mix"
-                    class="w-full p-4 rounded-2xl border mb-6"
-                >
-
-                    <option value="">
-                        Чем разбавляете алкоголь?
-                    </option>
-
-                    <option>
-                        Coca-cola
-                    </option>
-
-                    <option>
-                        Sprite
-                    </option>
-
-                    <option>
-                        Сок
-                    </option>
-
-                    <option>
-                        Пью в чистом виде
-                    </option>
-                </select>
-
-                <p class="text-gray-600">
-
+                <p class="text-gray-600 mb-6">
                     Если Вы не нашли нужного вопроса, пожалуйста, укажите свои пожелания ниже, в разделе "Гостевая книга". 
-                    
                 </p>
 
             </div>
 
             <button
                 type="submit"
-                class="btn-primary w-full py-4 rounded-2xl font-medium"
+                id="rsvpSubmitBtn"
+                class="btn-primary w-full py-4 rounded-2xl font-medium flex items-center justify-center gap-2"
             >
-
                 Отправить ответ
-
             </button>
 
         </form>
@@ -1418,11 +1305,10 @@
 
             <button
                 type="submit"
-                class="btn-primary px-8 py-4 rounded-2xl"
+                id="guestbookSubmitBtn"
+                class="btn-primary px-8 py-4 rounded-2xl flex items-center justify-center gap-2"
             >
-
                 Оставить пожелание
-
             </button>
 
         </form>
@@ -1515,6 +1401,143 @@ AOS.init({
     duration: 900,
     once: true
 });
+
+/* ==========================
+   GUEST CARDS
+========================== */
+
+/* ==========================
+   GUEST CARDS
+========================== */
+
+let guestCount = 0;
+
+function createGuestCard(index) {
+    const num = index + 1;
+    const div = document.createElement('div');
+    div.id = `guestCard_${index}`;
+    div.className = 'rounded-2xl border bg-[#faf7f2] p-5 mb-6 space-y-4 relative';
+
+    const removeBtn = index > 0
+        ? `<button type="button" onclick="removeGuestCard(${index})"
+               class="absolute top-4 right-4 text-gray-400 hover:text-red-400 text-xl leading-none">✕</button>`
+        : '';
+
+    div.innerHTML = `
+        ${removeBtn}
+        <p class="font-semibold text-[#344E41]">Гость ${num}</p>
+
+        <input
+            type="text"
+            name="guest_${index}_name"
+            placeholder="Имя и фамилия"
+            required
+            class="w-full p-4 rounded-2xl border bg-white"
+        >
+
+        <select name="guest_${index}_attendance" required class="w-full p-4 rounded-2xl border bg-white">
+            <option value="">Сможете ли присутствовать?</option>
+            <option value="Да">Да, с радостью</option>
+            <option value="Нет">К сожалению, нет</option>
+        </select>
+
+        <div class="guest-extra-fields" id="extraFields_${index}">
+
+            <select name="guest_${index}_transfer" class="w-full p-4 rounded-2xl border bg-white guest-transfer-select mt-4" data-index="${index}">
+                <option value="">Нужен ли трансфер?</option>
+                <option value="Да">Да</option>
+                <option value="Нет">Нет</option>
+            </select>
+
+            <div id="transferDetails_${index}" class="hidden opacity-0 transition-all duration-300 mt-4">
+                <p class="text-sm text-gray-500 mb-4">
+                    Ждем вас в 14:00 по адресу: г.Москва, ул. Международная, д. 12, метро Мякинино.<br>
+                    Парковка рядом с ТЦ "Вегас Мякинино"
+                </p>
+                <textarea
+                    name="guest_${index}_transferComment"
+                    placeholder="Комментарий к трансферу"
+                    class="w-full p-4 rounded-2xl border bg-white"
+                ></textarea>
+            </div>
+
+            <textarea
+                name="guest_${index}_food"
+                rows="3"
+                placeholder="Аллергии и ограничения питания"
+                class="w-full p-4 rounded-2xl border bg-white mt-4"
+            ></textarea>
+
+            <select name="guest_${index}_alcohol" class="w-full p-4 rounded-2xl border bg-white mt-4">
+                <option value="">Предпочтения по алкоголю</option>
+                <option>Красное вино</option>
+                <option>Белое вино</option>
+                <option>Шампанское</option>
+                <option>Виски / коньяк</option>
+                <option>Водка</option>
+                <option>Не буду пить алкоголь</option>
+            </select>
+
+            <select name="guest_${index}_alcohol_mix" class="w-full p-4 rounded-2xl border bg-white mt-4">
+                <option value="">Чем разбавляете алкоголь?</option>
+                <option>Coca-cola</option>
+                <option>Sprite</option>
+                <option>Сок</option>
+                <option>Пью в чистом виде</option>
+            </select>
+
+        </div>
+    `;
+
+    // Вешаем обработчик трансфера после создания элемента
+    setTimeout(() => {
+        // Скрыть доп. поля если гость не придёт
+        const attendanceSel = div.querySelector(`[name="guest_${index}_attendance"]`);
+        const extraFields   = document.getElementById(`extraFields_${index}`);
+        if (attendanceSel && extraFields) {
+            attendanceSel.addEventListener('change', function () {
+                if (this.value === 'Нет') {
+                    extraFields.style.display = 'none';
+                } else {
+                    extraFields.style.display = 'block';
+                }
+            });
+        }
+
+        // Трансфер
+        const sel     = div.querySelector('.guest-transfer-select');
+        const details = document.getElementById(`transferDetails_${index}`);
+        if (sel && details) {
+            sel.addEventListener('change', function () {
+                if (this.value === 'Да') {
+                    details.classList.remove('hidden');
+                    setTimeout(() => details.classList.remove('opacity-0'), 10);
+                } else {
+                    details.classList.add('opacity-0');
+                    setTimeout(() => details.classList.add('hidden'), 300);
+                    const ta = details.querySelector('textarea');
+                    if (ta) ta.value = '';
+                }
+            });
+        }
+    }, 0);
+
+    return div;
+}
+
+function addGuestCard() {
+    document.getElementById('guestCards').appendChild(createGuestCard(guestCount));
+    guestCount++;
+}
+
+function removeGuestCard(index) {
+    const card = document.getElementById(`guestCard_${index}`);
+    if (card) card.remove();
+}
+
+// Первая карточка при загрузке
+addGuestCard();
+
 
 /* ==========================
    MOBILE MENU
@@ -1707,132 +1730,122 @@ async function sendToGoogleSheets(data) {
 
 document
 .getElementById("rsvpForm")
-.addEventListener(
-    "submit",
-    async function(e){
+.addEventListener("submit", async function(e) {
 
-        e.preventDefault();
+    e.preventDefault();
 
-        const formData=
-            Object.fromEntries(
-                new FormData(this)
-            );
+    const btn = document.getElementById('rsvpSubmitBtn');
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner"></span>&nbsp;Отправляем…';
 
-        try{
+    const baseData   = Object.fromEntries(new FormData(this));
+    const guestCards = document.querySelectorAll('#guestCards > div');
 
-            await sendToGoogleSheets({
-                type:"RSVP",
-                ...formData
-            });
+    try {
+        for (let i = 0; i < guestCards.length; i++) {
+            const rowData = {
+                type:            'RSVP',
+                guestIndex:      i + 1,
+                totalGuests:     guestCards.length,
+                fullName:        baseData[`guest_${i}_name`]           || '—',
+                attendance:      baseData[`guest_${i}_attendance`]     || '—',
+                transfer:        baseData[`guest_${i}_transfer`]       || '—',
+                transferComment: baseData[`guest_${i}_transferComment`]|| '',
+                food:            baseData[`guest_${i}_food`]           || '—',
+                alcohol:         baseData[`guest_${i}_alcohol`]        || '—',
+                alcohol_mix:     baseData[`guest_${i}_alcohol_mix`]    || '—'
+            };
 
-
+            await sendToGoogleSheets(rowData);
 
             await emailjs.send(
                 EMAILJS_SERVICE_ID,
                 EMAILJS_TEMPLATE_ID,
                 {
-                    fullName: formData.fullName,
-                    attendance: formData.attendance,
-                    guests: formData.guests,
-                    transfer: formData.transfer,
-                    transferComment: formData.transferComment,
-                    food: formData.food,
-                    alcohol: formData.alcohol,
-                    alcohol_mix: formData.alcohol_mix
+                    fullName:        rowData.fullName,
+                    attendance:      rowData.attendance,
+                    guests:          rowData.totalGuests,
+                    transfer:        rowData.transfer,
+                    transferComment: rowData.transferComment,
+                    food:            rowData.food,
+                    alcohol:         rowData.alcohol,
+                    alcohol_mix:     rowData.alcohol_mix
                 }
             );
-
-
-
-            alert(
-                "Спасибо! Ваш ответ получен."
-            );
-
-            this.reset();
-
-        }catch(error){
-
-            alert(
-                "Ошибка отправки."
-            );
-
         }
 
+        alert('Спасибо! Ваш ответ получен.');
+        this.reset();
+        document.getElementById('guestCards').innerHTML = '';
+        guestCount = 0;
+        addGuestCard();
+
+    } catch(error) {
+        alert('Ошибка отправки.');
+    } finally {
+        btn.disabled = false;
+        btn.innerHTML = 'Отправить ответ';
     }
-);
+});
 
 /* ==========================
    GUESTBOOK
 ========================== */
-
 document
 .getElementById("guestbookForm")
-.addEventListener(
-    "submit",
-    async function(e){
+.addEventListener("submit", async function(e) {
 
-        e.preventDefault();
+    e.preventDefault();
 
-        const data=
-            Object.fromEntries(
-                new FormData(this)
-            );
+    const btn = document.getElementById('guestbookSubmitBtn');
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner"></span>&nbsp;Отправляем…';
 
-        try{
+    const data = Object.fromEntries(new FormData(this));
 
-            await sendToGoogleSheets({
-                type:"Guestbook",
-                ...data
-            });
-
-            alert(
-                "Спасибо за пожелание!"
-            );
-
-            this.reset();
-
-        }catch(error){
-
-            alert(
-                "Не удалось отправить сообщение."
-            );
-
-        }
-
+    try {
+        await sendToGoogleSheets({ type: 'Guestbook', ...data });
+        alert('Спасибо за пожелание!');
+        this.reset();
+    } catch(error) {
+        alert('Не удалось отправить сообщение.');
+    } finally {
+        btn.disabled = false;
+        btn.innerHTML = 'Оставить пожелание';
     }
-);
+});
 
-/* ==========================
-   RSVP LOGIC
-========================== */
+// /* ==========================
+//    RSVP LOGIC
+// ========================== */
 
-document
-.getElementById("attendance")
-.addEventListener(
-    "change",
-    function(){
+// document
+// .getElementById("attendance")
+// .addEventListener(
+//     "change",
+//     function(){
 
-        const fields=
-            document.getElementById(
-                "attendanceFields"
-            );
+//         const fields=
+//             document.getElementById(
+//                 "attendanceFields"
+//             );
 
-        if(
-            this.value==="Нет"
-        ){
+//         if(
+//             this.value==="Нет"
+//         ){
 
-            fields.style.display=
-                "none";
+//             fields.style.display=
+//                 "none";
 
-        }else{
+//         }else{
 
-            fields.style.display=
-                "block";
+//             fields.style.display=
+//                 "block";
 
-        }
+//         }
 
-    }
-);
+//     }
+// );
 
 /* ==========================
    ПЕРСОНАЛЬНОЕ ПРИГЛАШЕНИЕ
